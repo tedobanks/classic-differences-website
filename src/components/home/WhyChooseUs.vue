@@ -1,13 +1,13 @@
 <template>
     <div class="container">
         <div class="items-wrapper">
-            <div class="section-title">Why choose us?</div>
+            <h2 class="section-title">Why choose us?</h2>
             <div class="tagline-description-container">
                 <div class="tagline-container">
-                    <div class="tagline">
+                    <h3 class="tagline">
                         Personalized Event & Care Solutions Tailored to Your
                         Needs
-                    </div>
+                    </h3>
                 </div>
                 <div class="description-container">
                     <div class="description">

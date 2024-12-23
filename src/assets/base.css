@@ -10,9 +10,10 @@
 /* semantic color variables for this project */
 :root {
     --color-background: var(--vt-c-white);
+    --color-background-secondary: var(--vt-c-black);
     --color-text: var(--vt-c-white);
     --color-text-secondary: var(--vt-c-black);
-    --color-section-title: var(var(--vt-c-red))
+    --color-section-title: var(--vt-c-red);
 
     --section-gap: 160px;
 }
@@ -20,9 +21,10 @@
 @media (prefers-color-scheme: dark) {
     :root {
       --color-background: var(--vt-c-black);
+      --color-background-secondary: var(--vt-c-white);
       --color-text: var(--vt-c-white);
       --color-text-secondary: var(--vt-c-black);
-      --color-section-title: var(var(--vt-c-red))
+      --color-section-title: var(--vt-c-red);
       
       --section-gap: 160px;
     }

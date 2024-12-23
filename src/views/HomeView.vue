@@ -2,6 +2,8 @@
 import Hero from "@/components/home/Hero.vue";
 import Services from "@/components/home/Services.vue";
 import WhyChooseUs from "@/components/home/WhyChooseUs.vue";
+import Testimonials from "@/components/home/Testimonials.vue";
+import FAQ from "@/components/home/FAQ.vue";
 </script>
 
 <template>
@@ -9,5 +11,7 @@ import WhyChooseUs from "@/components/home/WhyChooseUs.vue";
         <Hero />
         <Services />
         <WhyChooseUs />
+        <Testimonials />
+        <FAQ />
     </div>
 </template>
