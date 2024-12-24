@@ -4,6 +4,7 @@ import Services from "@/components/home/Services.vue";
 import WhyChooseUs from "@/components/home/WhyChooseUs.vue";
 import Testimonials from "@/components/home/Testimonials.vue";
 import FAQ from "@/components/home/FAQ.vue";
+import Footer from "@/components/Footer.vue";
 </script>
 
 <template>

@@ -10,7 +10,7 @@
             "subType": "Bride",
             "name": "Sarah Williams"
         },
-        "image": ""
+        "image": "/images/sarah.jpg"
     },
     {
         "id": 1,
@@ -23,7 +23,7 @@
             "subType": "Couple",
             "name": "Emily & David S"
         },
-        "image": ""
+        "image": "/images/couple.jpg"
     },
     {
         "id": 2,
@@ -36,7 +36,7 @@
             "subType": "",
             "name": "James T."
         },
-        "image": ""
+        "image": "/images/james.jpg"
     },
     {
         "id": 3,
@@ -49,6 +49,6 @@
             "subType": "",
             "name": "Adeola M"
         },
-        "image": ""
+        "image": "/images/adeola.jpg"
     }
 ]
