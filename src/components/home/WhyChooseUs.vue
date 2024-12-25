@@ -1,3 +1,26 @@
+<script setup>
+const perksList = [
+    {
+        image: "/images/rocket.svg",
+        title: "Plan & Get Started",
+        description:
+            "Begin your journey with us, whether it's for a memorable event or a reliable care solution. Simply share your vision, and we'll manage every aspect, so you can focus on enjoying the experience.",
+    },
+    {
+        image: "/images/pen.svg",
+        title: "Expert Execution – on Time",
+        description:
+            "Our seasoned professionals are dedicated to delivering your projects with precision and on schedule. From flawless event setups to well-coordinated care services, every detail is handled with the highest level of care.",
+    },
+    {
+        image: "/images/reload.svg",
+        title: "Simple & Unlimited Revisions",
+        description:
+            "Your satisfaction is our top priority. We provide as many revisions as necessary to ensure that everything aligns perfectly with your expectations, whether for event design or service arrangements.",
+    },
+];
+</script>
+
 <template>
     <div class="container">
         <div class="items-wrapper">
@@ -19,7 +42,16 @@
                         and stress-free experience.
                     </div>
                     <button class="reach-out">Reach Out To Us</button>
-                </div>    
+                </div>
+            </div>
+        </div>
+        <div class="perks-container">
+            <div v-for="(perk, index) in perksList" :key="index" class="perk">
+                <div class="image-container">
+                    <img :src="perk.image" alt="" />
+                </div>
+                <h4 class="perk-title">{{ perk.title }}</h4>
+                <p class="perk-description">{{ perk.description }}</p>
             </div>
         </div>
     </div>
@@ -28,17 +60,18 @@
 <style scoped>
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .items-wrapper {
     width: 90%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: start;
+    margin-bottom: 3rem;
 }
 
 .section-title {
@@ -86,5 +119,64 @@
     cursor: pointer;
     border: none;
     font-size: 1.125rem;
+}
+
+.perks-container {
+    width: 90%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+}
+
+.perk {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    position: relative;
+}
+
+.image-container {
+    width: calc(80rem / 16);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--vt-c-red);
+    margin-bottom: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.perk:first-child::after,
+.perk:nth-child(2)::after {
+    content: "";
+    width: 100%;
+    aspect-ratio: 324 / 8;
+    position: absolute;
+    left: 2.5rem;
+    top: 2.5rem;
+    background-image: url("/images/arrow.svg");
+    background-size: cover;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+.image-container img {
+    width: 45%;
+    aspect-ratio: 1;
+}
+
+.perk-title {
+    font-weight: 500;
+    font-size: calc(24rem / 16);
+    margin-bottom: 0.625rem;
+}
+
+.perk-description {
+    width: 80%;
 }
 </style>
