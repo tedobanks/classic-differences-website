@@ -179,4 +179,50 @@ const perksList = [
 .perk-description {
     width: 80%;
 }
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding-inline: 1.25rem;
+    }
+
+    .section-title {
+        margin-top: 5rem;
+    }
+
+    .tagline-description-container {
+        flex-direction: column;
+    }
+
+    .tagline-container,
+    .description-container {
+        width: 100%;
+    }
+
+    .tagline {
+        margin-bottom: 1.25rem;
+    }
+
+    .perks-container {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .perk {
+        width: 100%;
+        height: fit-content !important;
+
+        margin-bottom: 5rem;
+    }
+
+    .perk:first-child::after,
+    .perk:nth-child(2)::after {
+        top: auto;
+        left: -10%;
+        bottom: -3.125rem;
+        transform: rotate(90deg);
+        width: 6.25rem;
+        background-size: cover;
+    }
+}
 </style>

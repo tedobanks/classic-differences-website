@@ -85,6 +85,7 @@ const services = [
     font-weight: 600;
     line-height: 1;
     margin-top: 1.25rem;
+    text-align: center;
 }
 
 .mini-carousel {
@@ -111,5 +112,32 @@ const services = [
     width: 100%;
     display: flex;
     flex-direction: column;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding-inline: 1.25rem;
+    }
+    .description {
+        font-size: 2rem;
+    }
+
+    .mini-carousel {
+        width: 100%;
+        gap: 0.625rem;
+        margin-top: 1.25rem;
+    }
+
+    .mini-carousel-item {
+        height: 3.125rem;
+        padding-inline: 0.625rem;
+        font-size: 0.75rem;
+    }
+
+    .main-carousel {
+        gap: 2.5rem;
+        margin-top: 3.125rem;
+        position: relative;
+    }
 }
 </style>

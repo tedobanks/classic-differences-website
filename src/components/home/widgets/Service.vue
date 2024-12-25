@@ -84,4 +84,59 @@ const props = defineProps({
     font-weight: 300;
     font-size: 1.125rem;
 }
+
+@media only screen and (max-width: 768px) {
+    .service-container {
+        flex-direction: column;
+        height: fit-content;
+        padding: 1.25rem;
+        position: relative;
+    }
+
+    .service-container::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: var(--vt-c-red);
+        opacity: 0.4;
+        z-index: -3;
+        border-radius: calc(22rem / 16);
+        filter: blur(600px);
+    }
+
+    .service-container::after {
+        content: "";
+        position: absolute;
+        height: calc(100% - 8px);
+        width: calc(100% - 8px);
+        background-color: var(--color-background);
+        z-index: -1;
+        border-radius: calc(22rem / 16);
+    }
+    
+    .service-container:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .service-container:nth-child(even) .text-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .image-container {
+        height: auto;
+        width: 100%;
+        aspect-ratio: 585 / 350;
+        border-radius: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .text-container {
+        width: 100%;
+        padding-left: 0;
+        gap: 0.625rem;
+    }
+    
+}
 </style>

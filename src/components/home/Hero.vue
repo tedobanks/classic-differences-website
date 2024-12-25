@@ -1,8 +1,9 @@
 <template>
     <div class="container" id="home">
         <div class="tagline-container">
-            <h1 class="tagline">Crafting Experiences</h1>
-            <h1 class="tagline">that Last a Lifetime</h1>
+            <h1 class="tagline">
+                Crafting Experiences <br />that Last a Lifetime
+            </h1>
         </div>
         <div class="description-container">
             <div class="description">
@@ -56,26 +57,27 @@
     position: relative;
 }
 
-.tagline:first-child::after {
+.tagline::after {
     content: "";
     width: 6rem;
     aspect-ratio: 1;
     position: absolute;
     right: -1.5rem;
-    top: -110%;
+    top: -40%;
     background-image: url("/images/star.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: -1;
 }
 
-.tagline:last-child::before {
+.tagline::before {
     content: "";
     width: 1rem;
     aspect-ratio: 1;
     position: absolute;
     left: 5%;
-    bottom: -40%;
+    bottom: -10%;
     background-image: url("/images/star.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -122,5 +124,45 @@
     cursor: pointer;
     border: none;
     margin-top: 3.125rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        overflow: hidden;
+    }
+
+    .container::before {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .tagline-container {
+        padding-inline: 1.25rem;
+    }
+
+    .tagline {
+        font-size: 3.125rem;
+    }
+
+    .tagline::after {
+        width: 4rem !important;
+        right: 10% !important;
+        top: -10% !important;
+        transform: rotate(20deg);
+    }
+
+    .tagline::before {
+        left: 20%;
+    }
+
+    .description-container {
+        width: 100%;
+        padding-inline: 1.25rem;
+    }
+
+    .description {
+        font-size: 1.125rem;
+        margin-top: 3.125rem;
+    }
 }
 </style>
