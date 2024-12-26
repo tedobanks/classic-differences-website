@@ -12,9 +12,8 @@ import Footer from "@/components/Footer.vue";
         <Hero />
         <Services />
         <WhyChooseUs />
-        <!-- 
-        
         <Testimonials />
+        <!-- 
         <FAQ /> -->
     </div>
 </template>

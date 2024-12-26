@@ -218,8 +218,8 @@ const perksList = [
     .perk:first-child::after,
     .perk:nth-child(2)::after {
         top: auto;
-        left: -10%;
-        bottom: -3.125rem;
+        left: -8%;
+        bottom: -3.75rem;
         transform: rotate(90deg);
         width: 6.25rem;
         background-size: cover;

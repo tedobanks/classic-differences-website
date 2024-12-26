@@ -34,7 +34,7 @@ const next = () => {
                 <br />comes to life with impeccable detail and care.
             </p>
         </div>
-        <div class="carousel">
+        <div class="carousel desktop">
             <button class="direction-button prev" @click="prev">
                 <img src="/images/caret.svg" alt="" />
             </button>
@@ -71,10 +71,59 @@ const next = () => {
                 <img src="/images/caret.svg" alt="" />
             </button>
         </div>
+
+        <div class="carousel mobile">
+            <div class="carousel-container">
+                <div class="main-testimonial">
+                    <h4 class="title">
+                        {{ currentTestimonial.testimonial.title }}
+                    </h4>
+                    <p class="body">
+                        {{ currentTestimonial.testimonial.body }}
+                    </p>
+                </div>
+                <div class="author-info">
+                    <div
+                        class="author-image"
+                        :style="{
+                            backgroundImage: `url(${currentTestimonial.image})`,
+                        }"
+                    ></div>
+                    <div class="author-identity">
+                        <p class="name">{{ currentTestimonial.client.name }}</p>
+                        <p class="type">
+                            <span
+                                v-if="currentTestimonial.client.subType != ''"
+                                class="sub-type"
+                                >{{ currentTestimonial.client.subType }},
+                            </span>
+                            <span class="main-type">{{
+                                currentTestimonial.client.type
+                            }}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="controls-container">
+                <button class="direction-button prev" @click="prev">
+                    <img src="/images/caret.svg" alt="" />
+                </button>
+                <button class="direction-button next" @click="next">
+                    <img src="/images/caret.svg" alt="" />
+                </button>
+            </div>
+        </div>
     </div>
 </template>
 
 <style scoped>
+.desktop {
+    display: flex;
+}
+
+.mobile {
+    display: none;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -228,5 +277,72 @@ const next = () => {
 
 .next img {
     transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 768px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+    }
+
+    .container {
+        padding-inline: 1.25rem;
+        overflow: hidden;
+    }
+    
+    .section-title {
+        margin-top: 5rem;
+    }
+
+    .carousel {
+        width: 100%;
+        height: 50vh;
+        justify-content: space-between;
+        margin-top: 2.5rem;
+        margin-bottom: 3.125rem;
+        flex-direction: column;
+    }
+
+    .carousel-container {
+        width: 100%;
+        height: 85%;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+        padding-block: 1.875rem;
+    }
+
+    .author-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .author-image {
+        width: 3.75rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        margin-right: 0.625rem;
+    }
+
+    .author-identity {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .controls-container {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.25rem;
+    }
 }
 </style>
