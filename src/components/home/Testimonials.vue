@@ -122,7 +122,7 @@ const next = () => {
 }
 
 .mobile {
-    display: none;
+    display: none !important;
 }
 .container {
     display: flex;
@@ -285,7 +285,7 @@ const next = () => {
     }
 
     .mobile {
-        display: flex;
+        display: flex !important;
     }
 
     .container {
