@@ -292,14 +292,14 @@ const next = () => {
         padding-inline: 1.25rem;
         overflow: hidden;
     }
-    
+
     .section-title {
         margin-top: 5rem;
     }
 
     .carousel {
         width: 100%;
-        height: 50vh;
+        height: 65vh;
         justify-content: space-between;
         margin-top: 2.5rem;
         margin-bottom: 3.125rem;
