@@ -139,4 +139,14 @@ const toggleDropDown = (index) => {
 .answer {
     padding-top: 1.25rem;
 }
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding-inline: 1.25rem;
+    }
+
+    .faq-container {
+        width: 100%;
+    }
+}
 </style>

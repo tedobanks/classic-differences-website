@@ -13,7 +13,6 @@ import Footer from "@/components/Footer.vue";
         <Services />
         <WhyChooseUs />
         <Testimonials />
-        <!-- 
-        <FAQ /> -->
+        <FAQ />
     </div>
 </template>
