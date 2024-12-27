@@ -137,6 +137,11 @@ const props = defineProps({
         padding-left: 0;
         gap: 0.625rem;
     }
+
+    .description {
+        font-weight: 300;
+        font-size: 0.875rem;
+    }
     
 }
 </style>
