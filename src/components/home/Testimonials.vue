@@ -25,7 +25,7 @@ const next = () => {
 </script>
 
 <template>
-    <div class="container">
+    <div class="container" id="testimonials">
         <h2 class="section-title">testimonial</h2>
         <h3 class="tagline">Your Event, <br />Our Passion</h3>
         <div class="description-container">

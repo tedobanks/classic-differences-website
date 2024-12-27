@@ -22,7 +22,7 @@ const perksList = [
 </script>
 
 <template>
-    <div class="container">
+    <div class="container" id="perks">
         <div class="items-wrapper">
             <h2 class="section-title">Why choose us?</h2>
             <div class="tagline-description-container">

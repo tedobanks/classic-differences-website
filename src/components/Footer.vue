@@ -1,6 +1,65 @@
+<script setup>
+import { computed } from "vue";
+
+const currentYear = computed(() => new Date().getFullYear());
+const navLinks = [
+    { path: "#home", name: "Home" },
+    { path: "#services", name: "Services" },
+    { path: "#perks", name: "Why choose us?" },
+    { path: "#testimonials", name: "Testimonials" },
+    { path: "#faq", name: "FAQs" },
+    { path: "", name: "Privacy Policy" },
+];
+</script>
+
 <template>
     <div class="container">
-        <div class="main-footer"></div>
+        <!-- Main Footer -->
+        <div class="main-footer">
+            <div class="basic-footer-info">
+                <div class="company-info">
+                    <div class="company-info-logo"></div>
+                    <p class="company-info-about">
+                        Classic Differences - A premier events and care services
+                        provider operating across the UK and Nigeria, delivering
+                        exceptional experiences and compassionate care solutions
+                        since 2020. Our dual expertise sets us apart in creating
+                        memorable moments and nurturing environments.
+                    </p>
+                </div>
+                <div class="company-contact">
+                    <div class="contact-item">
+                        <img src="/images/mail.svg" alt="" />
+                        <p>classicdifferenceslimited@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <img src="/images/phone.svg" alt="" />
+                        <p>07476218341</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="main-footer-divider" />
+
+            <div class="sitemap">
+                <div class="nav-links">
+                    <a
+                        v-for="(item, index) in navLinks"
+                        :key="index"
+                        :href="item.path"
+                        >{{ item.name }}</a
+                    >
+                </div>
+                <div class="copy-right-info">
+                    <p>
+                        &copy; {{ currentYear }} Classic Differences - All Right
+                        Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer CTA -->
         <div class="footer-cta">
             <div class="title-container">
                 <h3 class="title">Experience the Difference</h3>
@@ -28,13 +87,103 @@
 .main-footer {
     width: 78%;
     height: 58vh;
-    background-color: green;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
+}
+
+.basic-footer-info {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.company-info {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 0.625rem;
+}
+
+.company-info-logo {
+    width: 70%;
+    aspect-ratio: 895/274;
+    background-image: url("/images/logo-light-mode.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: start;
+}
+
+.company-info-about {
+    font-size: 0.875rem;
+}
+
+.main-footer-divider {
+    width: 100%;
+    height: 0.5px;
+    color: var(--color-text);
+    margin-top: 2.5rem;
+}
+
+.company-contact {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 1.25rem;
+}
+
+.contact-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.contact-item img {
+    width: 1.25rem;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 0.625rem;
+    filter: invert(1);
+}
+
+.sitemap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.9375rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 0.875rem;
+}
+
+.copy-right-info {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.copy-right-info p {
+    font-size: 0.875rem;
 }
 
 .footer-cta {
@@ -95,5 +244,90 @@
     height: 3.5rem;
     border-radius: 0.5rem;
     color: var(--color-text-secondary);
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+    .company-info-logo {
+        background-image: url("/images/logo-dark-mode.png");
+    }
+
+    .company-contact img {
+        filter: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2.5rem;
+        padding-block: 2.5rem;
+    }
+
+    .main-footer, .footer-cta {
+        position: relative;
+        top: auto;
+    }
+
+    .basic-footer-info,
+    .sitemap,
+    .nav-links,
+    .cta-button-container {
+        flex-direction: column;
+    }
+
+    .basic-footer-info,
+    .company-info {
+        gap: 1.25rem;
+    }
+
+    .company-info,
+    .company-contact,
+    .title-container,
+    .description-container {
+        width: 100%;
+    }
+
+    .company-contact {
+        gap: 0.625rem;
+    }
+
+    .main-footer,
+    .footer-cta {
+        width: calc(100% - 2.5rem);
+    }
+
+    .main-footer-divider {
+        margin-block: 2.5rem;
+    }
+
+    .sitemap {
+        align-items: start;
+        gap: 1.25rem;
+    }
+
+    .nav-links {
+        align-items: start;
+        gap: 0.625rem;
+    }
+
+    .footer-cta {
+        padding: 1.25rem;
+        height: auto;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .cta-button-container {
+        width: 100%;
+        gap: 1.25rem;
+    }
+    
+    .cta-button {
+        width: 100%;
+        border-radius: calc(26.25rem / 16);
+    }
 }
 </style>

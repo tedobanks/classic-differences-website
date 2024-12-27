@@ -49,7 +49,7 @@ const services = [
 </script>
 
 <template>
-    <div class="container">
+    <div class="container" id="services">
         <h2 class="section-title">Our services</h2>
         <h3 class="description">We can help you with...</h3>
         <div class="mini-carousel">

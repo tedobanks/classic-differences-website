@@ -29,7 +29,7 @@ const toggleDropDown = (index) => {
 </script>
 
 <template>
-    <div class="container">
+    <div class="container" id="faq">
         <h2 class="section-title">FAQ's</h2>
         <p class="description">Providing answers to your questions</p>
         <div class="faq-container">
