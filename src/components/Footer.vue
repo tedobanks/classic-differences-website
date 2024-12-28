@@ -80,11 +80,16 @@ const navLinks = [
                     href="https://wa.me/447476218341?text=I%20want%20to%20enquire%20about%20..."
                     class="cta-button-wrapper"
                     target="_blank"
-                ></a>
-                <div class="cta-button">
-                    <img src="/images/whatsapp.png" alt="" class="whatsapp" />
-                    <p>WhatsApp</p>
-                </div>
+                >
+                    <div class="cta-button">
+                        <img
+                            src="/images/whatsapp.png"
+                            alt=""
+                            class="whatsapp"
+                        />
+                        <p>WhatsApp</p>
+                    </div>
+                </a>
 
                 <!-- Second Button -->
                 <a
@@ -374,6 +379,10 @@ const navLinks = [
     .cta-button-container {
         width: 100%;
         gap: 1.25rem;
+    }
+
+    .cta-button-wrapper {
+        width: 100%;
     }
 
     .cta-button {
