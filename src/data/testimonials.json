@@ -2,8 +2,8 @@
     {
         "id": 0,
         "testimonial": {
-            "title": "Pato's Classic Differences is the Best Event Service I’ve Ever Used!",
-            "body": "From start to finish, the team at Pato’s Classic Differences was outstanding. They took care of every detail, from planning to décor, and made our wedding day completely stress-free. Their attention to detail and professionalism were beyond what we imagined!"
+            "title": "Classic Differences is the Best Event Service I’ve Ever Used!",
+            "body": "From start to finish, the team at Classic Differences was outstanding. They took care of every detail, from planning to décor, and made our wedding day completely stress-free. Their attention to detail and professionalism were beyond what we imagined!"
         },
         "client": {
             "type": "Wedding Client",
@@ -15,7 +15,7 @@
     {
         "id": 1,
         "testimonial": {
-            "title": "Pato’s Classic Differences Made Our Wedding Absolutely Perfect!",
+            "title": "Classic Differences Made Our Wedding Absolutely Perfect!",
             "body": "From planning every little detail to creating the most beautiful décor, they brought our dream to life. The team was professional, creative, and made everything feel so seamless."
         },
         "client": {
@@ -42,7 +42,7 @@
         "id": 3,
         "testimonial": {
             "title": "Exceptional Care Home Services We Rely On!",
-            "body": "The care home services provided by Pato’s Classic Differences have been exceptional. Their staff is reliable, and the level of professionalism and maintenance they deliver has made a huge difference in our daily operations."
+            "body": "The care home services provided by Classic Differences have been exceptional. Their staff is reliable, and the level of professionalism and maintenance they deliver has made a huge difference in our daily operations."
         },
         "client": {
             "type": "Care Home Manager",
