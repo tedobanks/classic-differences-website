@@ -94,7 +94,7 @@ const toggleDropDown = (index) => {
     border-radius: calc(20rem / 16);
     padding-inline: 1.25rem;
     padding-block: 0.9375rem;
-    background-color: var(--vt-c-black);
+    background-color: var(--color-background);
     display: flex;
     flex-direction: column;
 }
@@ -148,5 +148,9 @@ const toggleDropDown = (index) => {
     .faq-container {
         width: 100%;
     }
+}
+
+@media only screen and (prefers-color-scheme: light) {
+
 }
 </style>

@@ -297,6 +297,10 @@ const navLinks = [
     color: var(--vt-c-white);
 }
 
+.whatsapp {
+    filter: invert(1);
+}
+
 @media only screen and (prefers-color-scheme: dark) {
     .company-info-logo {
         background-image: url("/images/logo-dark-mode.png");
@@ -304,10 +308,6 @@ const navLinks = [
 
     .company-contact img {
         filter: none;
-    }
-
-    .whatsapp {
-        filter: invert(1);
     }
 }
 
@@ -388,6 +388,13 @@ const navLinks = [
     .cta-button {
         width: 100%;
         border-radius: calc(26.25rem / 16);
+    }
+}
+
+@media only screen and (prefers-color-scheme: light) {
+    .title,
+    .description {
+        color: var(--vt-c-white);
     }
 }
 </style>

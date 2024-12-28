@@ -345,4 +345,27 @@ const next = () => {
         gap: 1.25rem;
     }
 }
+
+@media only screen and (prefers-color-scheme: light) {
+    .container::before {
+        width: 40rem;
+        opacity: 0.5;
+        filter: blur(178px);
+    }
+
+    .section-title,
+    .tagline,
+    .description,
+    .title,
+    .body,
+    .name,
+    .sub-type,
+    .main-type {
+        color: var(--vt-c-white) !important;
+    }
+
+    .direction-button img {
+        filter: invert(1);
+    }
+}
 </style>

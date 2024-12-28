@@ -12,7 +12,12 @@
                 with excellence.
             </div>
         </div>
-        <button class="book-a-meeting">Book A Meeting</button>
+        <a
+            href="mailto:classicdifferenceslimited@gmail.com?subject=Book a Meeting Request&body=Hello Classic Differences,%0D%0A%0D%0AI would like to schedule a meeting to discuss your services.%0D%0A%0D%0APreferred Date/Time:%0D%0AService Interest:%0D%0AContact Number:"
+            class="book-a-meeting-wrapper"
+        >
+            <button class="book-a-meeting">Book A Meeting</button>
+        </a>
     </div>
 </template>
 
@@ -38,6 +43,7 @@
     border-radius: 50%;
     opacity: 0.4;
     filter: blur(148px);
+    z-index: -10;
 }
 
 .tagline-container {
@@ -55,6 +61,7 @@
     line-height: 1;
     letter-spacing: -3px;
     position: relative;
+    color: var(--vt-c-white);
 }
 
 .tagline::after {
@@ -98,6 +105,7 @@
     line-height: 1.3;
     margin-top: 3.125rem;
     position: relative;
+    color: var(--vt-c-white);
 }
 
 .description::after {
@@ -111,6 +119,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.book-a-meeting-wrapper {
+    text-decoration: none;
 }
 
 .book-a-meeting {
@@ -163,6 +175,21 @@
     .description {
         font-size: 1.125rem;
         margin-top: 3.125rem;
+    }
+}
+
+@media only screen and (prefers-color-scheme: light) {
+    .container::before {
+        opacity: 0.45;
+        filter: blur(158px);
+    }
+}
+
+@media only screen and (prefers-color-scheme: light) and (min-width: 768px) {
+    .container::before {
+        width: 46.875rem;
+        opacity: 0.6;
+        filter: blur(158px);
     }
 }
 </style>

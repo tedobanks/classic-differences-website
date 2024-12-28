@@ -11,8 +11,8 @@
 :root {
     --color-background: var(--vt-c-white);
     --color-background-secondary: var(--vt-c-black);
-    --color-text: var(--vt-c-white);
-    --color-text-secondary: var(--vt-c-black);
+    --color-text: var(--vt-c-black);
+    --color-text-secondary: var(--vt-c-white);
     --color-section-title: var(--vt-c-red);
 
     --section-gap: 160px;

@@ -41,7 +41,12 @@ const perksList = [
                         and let us take care of everything, ensuring a seamless
                         and stress-free experience.
                     </div>
-                    <button class="reach-out">Reach Out To Us</button>
+                    <a
+                        href="mailto:classicdifferenceslimited@gmail.com?subject=General Inquiry&body=Hello Classic Differences,%0D%0A%0D%0AI'm interested in learning more about your services.%0D%0A%0D%0AService Interest:%0D%0AMessage:"
+                        class="reach-out-wrapper"
+                    >
+                        <button class="reach-out">Reach Out To Us</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -108,6 +113,10 @@ const perksList = [
 .description {
     font-weight: 300;
     font-size: 1.125rem;
+}
+
+.reach-out-wrapper {
+    text-decoration: none;
 }
 
 .reach-out {

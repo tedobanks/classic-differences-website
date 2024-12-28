@@ -72,7 +72,7 @@ const props = defineProps({
     color: var(--vt-c-red);
     font-size: 1.75rem;
     font-weight: 600;
-    letter-spacing: 1.5px;
+    letter-spacing: -1.5px;
     line-height: 1;
 }
 
@@ -83,6 +83,10 @@ const props = defineProps({
 .description {
     font-weight: 300;
     font-size: 1.125rem;
+    color: var(--color-text);
+}
+
+@media only screen and (prefers-color-scheme: dark) {
 }
 
 @media only screen and (max-width: 768px) {
