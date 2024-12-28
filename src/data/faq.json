@@ -1,34 +1,42 @@
 [
-    {
-      "question": "What services do you offer?",
-      "answer": "We offer a comprehensive range of services, including:\n* **Event Design & Decor:** We specialize in creating stunning and unique visual experiences for a variety of events, such as weddings, corporate functions, birthdays, and more. Our services include floral arrangements, table settings, lighting, drapery, and custom backdrops.\n* **Care Home Services:** We provide compassionate and personalized care for seniors in our state-of-the-art care home facility. Our services include assisted living, memory care, skilled nursing, and rehabilitation."
-    },
-    {
-      "question": "Do you offer event planning services in addition to design and decor?",
-      "answer": "While we excel in event design and decor, we also offer partial event planning services to complement our visual expertise. This can include vendor coordination, timeline creation, and on-site management to ensure a seamless and stress-free event for our clients."
-    },
-    {
-      "question": "What is the typical timeline for booking your services?",
-      "answer": "For events, we recommend booking our design and decor services at least 6-8 weeks in advance, especially for peak seasons. For care home services, inquiries and assessments can be scheduled promptly, with move-in dates varying based on availability."
-    },
-    {
-      "question": "How do you handle budget constraints?",
-      "answer": "We understand that budgets can vary. We work closely with each client to understand their financial limitations and create a customized design plan that aligns with their budget without compromising on quality or creativity. We offer a range of design options and can suggest cost-effective alternatives to achieve the desired look."
-    },
-    {
-      "question": "What is your process for selecting decor and design elements?",
-      "answer": "We begin by carefully listening to your vision and understanding your style preferences. We then conduct a site visit to assess the space and gather inspiration. We present mood boards and design concepts, incorporating your feedback throughout the process. We strive for a collaborative approach to ensure the final result reflects your unique personality and style."
-    },
-    {
-      "question": "Do you provide care home services for seniors?",
-      "answer": "Yes, we offer a range of care home services for seniors. Our facility provides a comfortable and supportive environment for residents to thrive."
-    },
-    {
-      "question": "What types of care home services do you offer?",
-      "answer": "Our care home services include:\n* **Assisted Living:** Provides support with daily living activities such as bathing, dressing, and medication management.\n* **Memory Care:** Offers specialized care for individuals with Alzheimer's disease and other forms of dementia.\n* **Skilled Nursing:** Provides 24/7 medical care for individuals with complex medical needs.\n* **Rehabilitation:** Offers short-term care for individuals recovering from illness or injury."
-    },
-    {
-      "question": "How can I learn more or get a quote?",
-      "answer": "To learn more about our services or to get a quote, please contact us via phone at [Phone Number] or email at [Email Address]."
-    }
-  ]
+  {
+    "id": 1,
+    "question": "What are the main services Classic Differences provides?",
+    "answer": "Classic Differences operates in two main sectors: Professional Events Services and Care Home Support Services. We operate across the UK and Nigeria, delivering exceptional experiences in both sectors."
+  },
+  {
+    "id": 2,
+    "question": "What does your event services include?",
+    "answer": "Our event services include comprehensive design and decor solutions such as floral arrangements, table settings, lighting, drapery, and custom backdrops. We also provide partial event planning services including vendor coordination, timeline creation, and on-site management."
+  },
+  {
+    "id": 3,
+    "question": "What care home support services do you offer?",
+    "answer": "We provide comprehensive care home support services including: transportation services (pick up and drop off for appointments), maintenance services (handyman work), deep cleaning and gardening, equipment installation, sensory room creation for children's homes, care staff recruitment, and specialized training programs for care home staff."
+  },
+  {
+    "id": 4,
+    "question": "What types of care homes do you support?",
+    "answer": "We support various types of care facilities including adult care homes, children's homes, and assisted living facilities. Our services are tailored to meet the specific needs of each facility type."
+  },
+  {
+    "id": 5,
+    "question": "How far in advance should I book your event services?",
+    "answer": "For events, we recommend booking our design and decor services at least 6-8 weeks in advance, especially during peak seasons. This allows adequate time for planning, design, and execution."
+  },
+  {
+    "id": 6,
+    "question": "How do you work with different budgets?",
+    "answer": "We understand that every client has different financial considerations. We work closely with each client to create customized solutions that align with their budget while maintaining quality. We can suggest various options and cost-effective alternatives to achieve desired outcomes."
+  },
+  {
+    "id": 7,
+    "question": "What is your service area?",
+    "answer": "We proudly operate in both the United Kingdom and Nigeria, serving clients across both countries with our full range of services."
+  },
+  {
+    "id": 8,
+    "question": "How can I get started with your services?",
+    "answer": "You can contact us through our website, via email at [Email Address], or by phone at [Phone Number]. We'll be happy to discuss your specific needs and provide a detailed quote for our services."
+  }
+]

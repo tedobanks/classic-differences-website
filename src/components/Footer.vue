@@ -30,7 +30,11 @@ const navLinks = [
                 <div class="company-contact">
                     <div class="contact-item">
                         <img src="/images/mail.svg" alt="" />
-                        <p>classicdifferenceslimited@gmail.com</p>
+                        <a
+                            href="mailto:classicdifferenceslimited@gmail.com?subject=Inquiry&body=Hi there, I'm contacting you through your website..."
+                            target="_blank"
+                            >classicdifferenceslimited@gmail.com</a
+                        >
                     </div>
                     <div class="contact-item">
                         <img src="/images/phone.svg" alt="" />
@@ -72,8 +76,27 @@ const navLinks = [
                 </div>
             </div>
             <div class="cta-button-container">
-                <div class="cta-button"></div>
-                <div class="cta-button"></div>
+                <a
+                    href="https://wa.me/447476218341?text=I%20want%20to%20enquire%20about%20..."
+                    class="cta-button-wrapper"
+                    target="_blank"
+                ></a>
+                <div class="cta-button">
+                    <img src="/images/whatsapp.png" alt="" class="whatsapp" />
+                    <p>WhatsApp</p>
+                </div>
+
+                <!-- Second Button -->
+                <a
+                    href="mailto:classicdifferenceslimited@gmail.com?subject=Inquiry&body=Hi there, I'm contacting you through your website..."
+                    class="cta-button-wrapper"
+                    target="_blank"
+                >
+                    <div class="cta-button">
+                        <img src="/images/mail.svg" alt="" />
+                        <p>Email</p>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
@@ -154,6 +177,11 @@ const navLinks = [
     object-position: center;
     margin-right: 0.625rem;
     filter: invert(1);
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: var(--color-text);
 }
 
 .sitemap {
@@ -238,12 +266,30 @@ const navLinks = [
     margin-top: 1.875rem;
 }
 
+.cta-button-wrapper {
+    text-decoration: none;
+}
+
 .cta-button {
     background-color: var(--vt-c-red);
     width: 11.59375rem;
     height: 3.5rem;
     border-radius: 0.5rem;
     color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3125rem;
+    cursor: pointer;
+}
+
+.cta-button img {
+    width: 1.25rem;
+    aspect-ratio: 1;
+}
+
+.cta-button p {
+    color: var(--vt-c-white);
 }
 
 @media only screen and (prefers-color-scheme: dark) {
@@ -253,6 +299,10 @@ const navLinks = [
 
     .company-contact img {
         filter: none;
+    }
+
+    .whatsapp {
+        filter: invert(1);
     }
 }
 
@@ -264,7 +314,8 @@ const navLinks = [
         padding-block: 2.5rem;
     }
 
-    .main-footer, .footer-cta {
+    .main-footer,
+    .footer-cta {
         position: relative;
         top: auto;
     }
@@ -324,7 +375,7 @@ const navLinks = [
         width: 100%;
         gap: 1.25rem;
     }
-    
+
     .cta-button {
         width: 100%;
         border-radius: calc(26.25rem / 16);
