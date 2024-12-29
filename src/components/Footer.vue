@@ -32,7 +32,6 @@ const navLinks = [
                         <img src="/images/mail.svg" alt="" />
                         <a
                             href="mailto:classicdifferenceslimited@gmail.com?subject=Inquiry&body=Hi there, I'm contacting you through your website..."
-                            target="_blank"
                             >classicdifferenceslimited@gmail.com</a
                         >
                     </div>

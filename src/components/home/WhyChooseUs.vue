@@ -34,7 +34,7 @@ const perksList = [
                 </div>
                 <div class="description-container">
                     <div class="description">
-                        At Pato's Classic Differences, we bring your vision to
+                        At Classic Differences, we bring your vision to
                         life with impeccable attention to detail. From event
                         planning to care home staffing, our services are crafted
                         to deliver exceptional results. Submit your requests,
