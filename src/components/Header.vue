@@ -1,10 +1,41 @@
 <script setup>
+import { ref, computed, onMounted, onBeforeUnmount } from "vue";
+
+const windowWidth = ref(window.innerWidth);
+const isMobile = computed(
+    () => windowWidth.value >= 0 && windowWidth.value <= 768
+);
+
+const mobileMenuState = ref(false);
+
+// Show menu if it's desktop OR if it's mobile and menu is toggled
+const shouldShowMenu = computed(() => !isMobile.value || mobileMenuState.value);
+
 const paths = [
     {
         name: "Contact",
         path: "/contact",
     },
 ];
+
+const toggleMobileMenu = () => {
+    mobileMenuState.value = !mobileMenuState.value;
+};
+
+onMounted(() => {
+    window.addEventListener("resize", handleResize);
+    console.log("mobileMenuState", mobileMenuState.value);
+    console.log("isMobile: ", isMobile.value);
+    console.log("shouldShowMenu: ", shouldShowMenu.value);
+});
+
+onBeforeUnmount(() => {
+    window.removeEventListener("resize", handleResize);
+});
+
+function handleResize() {
+    windowWidth.value = window.innerWidth;
+}
 </script>
 
 <template>
@@ -13,7 +44,12 @@ const paths = [
             <RouterLink to="/" class="logo-wrapper">
                 <div class="logo"></div>
             </RouterLink>
-            <div class="nav-links">
+            <div v-if="shouldShowMenu" class="nav-links">
+                <div
+                    v-if="isMobile"
+                    class="close-icon"
+                    @click="toggleMobileMenu"
+                ></div>
                 <RouterLink
                     v-for="(path, index) in paths"
                     :key="index"
@@ -27,6 +63,11 @@ const paths = [
                     >Request a Quote</a
                 >
             </div>
+            <div
+                v-if="isMobile"
+                class="menu-icon"
+                @click="toggleMobileMenu"
+            ></div>
         </div>
     </div>
 </template>
@@ -90,5 +131,60 @@ const paths = [
     text-decoration: none;
     color: var(--vt-c-white);
     margin-right: calc((3.125rem - (0.85 * 3.125rem)) / 2);
+}
+
+@media only screen and (max-width: 768px) {
+    .main-header-wrapper {
+        position: relative;
+    }
+
+    .nav-links {
+        position: absolute;
+        height: fit-content;
+        width: 100%;
+        flex-direction: column;
+        border: 2px solid black;
+        left: 0;
+        top: 0;
+        padding: 3.125rem 1.25rem 1.25rem 1.25rem;
+        border-radius: 0.875rem;
+        background-color: var(--vt-c-red-rgb-30);
+    }
+
+    .nav-link {
+        color: var(--vt-c-white);
+        font-size: 1.125rem;
+    }
+
+    .cta-button {
+        background-color: var(--vt-c-white);
+        color: var(--vt-c-red);
+        width: 100%;
+        height: 3.125rem !important;
+        font-size: 1.125rem;
+        font-weight: 500;
+    }
+
+    .menu-icon,
+    .close-icon {
+        margin-right: 0.625rem;
+        height: 75%;
+        aspect-ratio: 1;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .menu-icon {
+        background-image: url("/images/burger-bar.png");
+    }
+
+    .close-icon {
+        height: 1.875rem;
+        position: absolute;
+        right: 0;
+        top: 0.625rem;
+        background-image: url("/images/close.png");
+    }
 }
 </style>

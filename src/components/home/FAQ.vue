@@ -11,7 +11,6 @@ onMounted(() => {
         { length: faqList.value.length },
         (_, index) => false
     );
-    console.log("Dropdown Toggle states: ", states.value);
 });
 
 const toggleDropDown = (index) => {
@@ -23,8 +22,6 @@ const toggleDropDown = (index) => {
             states.value[i] = false;
         }
     }
-
-     console.log(states.value)
 };
 </script>
 

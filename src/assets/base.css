@@ -7,7 +7,8 @@
     --vt-c-red-dark: #8b0000;
     --vt-c-white-rgb: rgb(255, 255, 255, 0.2);
     --vt-c-black-rgb: rgb(17, 18, 4, 0.2);
-    --vt-c-red-rgb: rgb(230, 57, 70, 0.1);
+    --vt-c-red-rgb-10: rgb(230, 57, 70, 0.1);
+    --vt-c-red-rgb-30: rgb(230, 57, 70, 1);
     --vt-c-navy-blue-rgb: rgb(20, 20, 43);
     --vt-c-red-dark-rgb: rgb(139, 0, 0);
 }
@@ -17,7 +18,7 @@
     --color-background: var(--vt-c-white);
     --color-background-secondary: var(--vt-c-black);
     --color-text: var(--vt-c-black);
-    --color-text-rgb: var(--vt-c-red-rgb);
+    --color-text-rgb: var(--vt-c-red-rgb-10);
     --color-text-secondary: var(--vt-c-white);
     --color-section-title: var(--vt-c-red);
     --logo: url("/images/logo-mark.png");
@@ -30,7 +31,7 @@
         --color-background: var(--vt-c-black);
         --color-background-secondary: var(--vt-c-white);
         --color-text: var(--vt-c-white);
-        --color-text-rgb: var(--vt-c-red-rgb);
+        --color-text-rgb: var(--vt-c-red-rgb-10);
         --color-text-secondary: var(--vt-c-black);
         --color-section-title: var(--vt-c-red);
         --logo: url("/images/logo-mark.png");
