@@ -77,7 +77,7 @@ const message = ref("");
 }
 
 .section-title {
-    color: var(--color-text-secondary);
+    color: var(--vt-c-white);
     font-weight: 700;
     font-size: 3rem;
     letter-spacing: -3.5px;
@@ -159,7 +159,7 @@ textarea {
 
 @media only screen and (max-width: 768px) {
     .container {
-        overflow: hidden ;
+        overflow: hidden;
         padding-inline: 1.25rem;
     }
 
@@ -168,7 +168,9 @@ textarea {
         transform: translate(-50%, -50%);
     }
 
-    form, .submit, .reply-guarantee-container {
+    form,
+    .submit,
+    .reply-guarantee-container {
         width: 100% !important;
     }
 
