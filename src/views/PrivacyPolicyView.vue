@@ -78,7 +78,11 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+
+onMounted(() => {
+    window.scrollTo(0, 0);
+});
 
 const tableOfContents = ref([
     { id: "infocollect", title: "1. WHAT INFORMATION DO WE COLLECT?" },
@@ -338,6 +342,4 @@ ol li {
     margin-top: 3em;
     margin-bottom: 27%;
 }
-
-
 </style>

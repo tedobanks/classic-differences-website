@@ -3,12 +3,11 @@ import { computed } from "vue";
 
 const currentYear = computed(() => new Date().getFullYear());
 const navLinks = [
-    { path: "#home", name: "Home" },
-    { path: "#services", name: "Services" },
-    { path: "#perks", name: "Why choose us?" },
-    { path: "#testimonials", name: "Testimonials" },
-    { path: "#faq", name: "FAQs" },
-    { path: "", name: "Privacy Policy" },
+    { path: "/", hash: "#home", name: "Home" },
+    { path: "/", hash: "#services", name: "Services" },
+    { path: "/", hash: "#perks", name: "Why choose us?" },
+    { path: "/", hash: "#testimonials", name: "Testimonials" },
+    { path: "/", hash: "#faq", name: "FAQs" },
 ];
 </script>
 
@@ -46,12 +45,16 @@ const navLinks = [
 
             <div class="sitemap">
                 <div class="nav-links">
-                    <a
+                    <RouterLink :to="{ path: '/', hash: '#faq' }"
+                        >Privacy Policy</RouterLink
+                    >
+                    <RouterLink
                         v-for="(item, index) in navLinks"
                         :key="index"
-                        :href="item.path"
-                        >{{ item.name }}</a
+                        :to="{ path: item.path, hash: item.hash }"
+                        >{{ item.name }}</RouterLink
                     >
+                    <RouterLink to="/privacy">Privacy Policy</RouterLink>
                 </div>
                 <div class="copy-right-info">
                     <p>

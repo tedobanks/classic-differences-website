@@ -136,6 +136,7 @@ function handleResize() {
 @media only screen and (max-width: 768px) {
     .main-header-wrapper {
         position: relative;
+        z-index: 20;
     }
 
     .nav-links {

@@ -24,7 +24,7 @@ const message = ref("");
             <!-- Website submission subject -->
             <input type="hidden" name="_subject" value="Website submission!" />
             <!-- reCAPTCHA -->
-            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_captcha" value="false" />
 
             <!-- Actual fields -->
             <div class="inline-input-container">
@@ -58,6 +58,7 @@ const message = ref("");
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 .container::before {
@@ -154,5 +155,30 @@ textarea {
     font-size: 1rem;
     font-weight: 600;
     border: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        overflow: hidden ;
+        padding-inline: 1.25rem;
+    }
+
+    .container::before {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    form, .submit, .reply-guarantee-container {
+        width: 100% !important;
+    }
+
+    .inline-input-container,
+    .submit-container {
+        flex-direction: column;
+    }
+
+    .submit-container {
+        gap: 0.625rem;
+    }
 }
 </style>

@@ -149,6 +149,7 @@
     }
 
     .tagline-container {
+        margin-top: 1.25rem;
         padding-inline: 1.25rem;
     }
 
